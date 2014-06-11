@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "description": "Library for creating fsa and testing if they accept specified strings.",
   "main": "index.coffee",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "sinon-chai": "~2.5.0"
+    "sinon-chai": "~2.5.0",
+    "coffee-script": "~1.7.1"
   },
   "scripts": {
     "test": "mocha"
