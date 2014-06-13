@@ -3,6 +3,7 @@ fsajs
 
 Library for creating finite state automata and testing if they accept a given string.
 
+```coffeescript
 fsajs = require('fsajs').fsajs # import the module
 
 fsa = fsajs.createFSA() # configure fsa
@@ -13,3 +14,4 @@ fsa = fsajs.createFSA() # configure fsa
 fsa.acceptsString(['b','c','c','c','b']) # returns true 
 
 fsa.acceptsString(['b','c','c','b','b']) # returns false 
+```
