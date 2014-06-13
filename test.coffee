@@ -1,7 +1,7 @@
 chai = require 'chai'
 sinon = require 'sinon'
 sinonChai = require 'sinon-chai'
-fsajs = require('./fsa.coffee').fsajs
+fsajs = require('./src/fsajs.coffee').fsajs
 
 chai.should()
 chai.use sinonChai
