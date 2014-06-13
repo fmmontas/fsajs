@@ -1,7 +1,6 @@
 chai = require 'chai'
 sinon = require 'sinon'
 sinonChai = require 'sinon-chai'
-require 'coffee-script/register'
 fsajs = require('./fsa.coffee').fsajs
 
 chai.should()

@@ -1,3 +1,4 @@
+require 'coffee-script/register'
 _ = require 'underscore'
 
 class FSA
