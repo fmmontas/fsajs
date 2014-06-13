@@ -1,8 +1,8 @@
 {
   "name": "fsajs",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "description": "Library for creating fsa and testing if they accept specified strings.",
-  "main": "index.coffee",
+  "main": "fsajs.coffee",
   "dependencies": {
     "underscore": "~1.6.0",
     "coffee-script": "^1.7.1"
