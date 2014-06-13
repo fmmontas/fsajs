@@ -13,5 +13,7 @@ describe 'Given an fsa', ->
       fsa = fsajs.createFSA()
       fsa.addState name: 'pepe', transitions:[{stateName:'other', symbol:'c'},{stateName:'otherState', symbol:'b'} ], initialState: true
       fsa.addState name: 'otherState', transitions:[{stateName:'other', symbol:'c'},{stateName:'otherState', symbol:'b'} ], finalState: true
+      fsa.addState name: 'other', transitions:[{stateName:'pepe', symbol:'c'},{stateName:'otherState', symbol:'b'} ] 
 
-      fsa.acceptsString(['b']).should.be.true
+      fsa.acceptsString(['b','c','c','c','b']).should.be.true
+      fsa.acceptsString(['b','c','c','b','b']).should.be.true
