@@ -4,7 +4,8 @@
   "description": "Library for creating fsa and testing if they accept specified strings.",
   "main": "index.coffee",
   "dependencies": {
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "coffee-script": "^1.7.1"
   },
   "devDependencies": {
     "sinon-chai": "~2.5.0",
