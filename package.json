@@ -4,10 +4,10 @@
   "description": "Library for creating fsa and testing if they accept specified strings.",
   "main": "lib/fsajs.js",
   "dependencies": {
-    "underscore": "~1.6.0",
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
-    "coffee-script": "^1.7.1"
+    "coffee-script": "^1.7.1",
     "sinon-chai": "~2.5.0",
     "coffee-script": "~1.7.1"
   },
