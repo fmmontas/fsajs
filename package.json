@@ -1,6 +1,6 @@
 {
   "name": "fsajs",
-  "version": "0.0.13",
+  "version": "0.0.131",
   "description": "Library for creating fsa and testing if they accept specified strings.",
   "main": "lib/fsajs.js",
   "dependencies": {
@@ -13,8 +13,8 @@
   },
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register test.coffee",
-    "build":   "coffee --compile --output lib/fsajs.js src/fsajs.coffee",
-    "prepublish":   "coffee --compile --output lib/fsajs.js src/fsajs.coffee"
+    "build":   "coffee --compile --output lib src/fsajs.coffee",
+    "prepublish":   "coffee --compile --output lib src/fsajs.coffee"
   },
   "repository": {
     "type": "git",
