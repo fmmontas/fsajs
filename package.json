@@ -1,6 +1,6 @@
 {
   "name": "fsajs",
-  "version": "0.0.131",
+  "version": "0.0.14",
   "description": "Library for creating fsa and testing if they accept specified strings.",
   "main": "lib/fsajs.js",
   "dependencies": {
