@@ -15,11 +15,16 @@ class FSA
     @self
 
 
-  acceptsString: (sequence, state = @initialState) ->
-    return yes if state.finalState and not sequence?.length
-    symbol = sequence.shift()
-    validStates = state.transitions?.filter((transition) -> transition.symbol is symbol)?.map (transition) -> transition.stateName
-    @states.filter((state) -> _.contains(validStates, state.name)).some (possibleState) => @acceptsString(sequence, possibleState)
+  acceptsString: (sequence) ->
+    sequenceCopy = sequence.slice 0
+
+    acceptsStringInternal =  (sequence, state) =>
+      return yes if state.finalState and not sequence?.length
+      symbol = sequence.shift()
+      validStates = state.transitions?.filter((transition) -> transition.symbol is symbol)?.map (transition) -> transition.stateName
+      @states.filter((state) -> _.contains(validStates, state.name)).some (possibleState) -> acceptsStringInternal(sequence, possibleState)
+
+    acceptsStringInternal(sequenceCopy, @initialState)
 
 exports.fsajs =
   createFSA : -> new FSA()
