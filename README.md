@@ -19,7 +19,7 @@ fsa = fsajs.createFSA() # configure fsa
 	  name: 'other', 
 	  transitions:[{stateName:'pepe', symbol:'c'},{stateName:'otherState', symbol:'b'}] 
 
-fsa.acceptsString ['b','c','c','c','b'] # returns true 
+fsa.acceptsString 'bcccb' # returns true 
 
-fsa.acceptsString ['b','c','c','b','b'] # returns false 
+fsa.acceptsString 'bccbb' # returns false 
 ```

@@ -16,17 +16,6 @@ describe 'Given an fsa', ->
       fsa.addState name: 'otherState', transitions:[{stateName:'other', symbol:'c'},{stateName:'otherState', symbol:'b'} ], finalState: true
       fsa.addState name: 'other', transitions:[{stateName:'pepe', symbol:'c'},{stateName:'otherState', symbol:'b'} ]
 
-
-
     it 'should determine if the fsa accepts the given string', ->
-      fsa.acceptsString(['b','c','c','c','b']).should.be.true
-      fsa.acceptsString(['b','c','c','b','b']).should.be.true
-
-    it 'should not change the given list', ->
-      testSequence = ['b','c','c','c','b']
-      expectedSequence = ['b','c','c','c','b']
-
-      fsa.acceptsString(testSequence)
-      testSequence.should.eql expectedSequence
-
-
+      fsa.acceptsString('bcccb').should.be.true
+      fsa.acceptsString('bccbb').should.be.true

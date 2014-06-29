@@ -15,8 +15,8 @@ class FSA
     @self
 
 
-  acceptsString: (sequence) ->
-    sequenceCopy = sequence.slice 0
+  acceptsString: (string) ->
+    sequence = string.split ''
 
     acceptsStringInternal =  (sequence, state) =>
       return yes if state.finalState and not sequence?.length
@@ -24,7 +24,7 @@ class FSA
       validStates = state.transitions?.filter((transition) -> transition.symbol is symbol)?.map (transition) -> transition.stateName
       @states.filter((state) -> _.contains(validStates, state.name)).some (possibleState) -> acceptsStringInternal(sequence, possibleState)
 
-    acceptsStringInternal(sequenceCopy, @initialState)
+    acceptsStringInternal(sequence, @initialState)
 
 exports.fsajs =
   createFSA : -> new FSA()
