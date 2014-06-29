@@ -19,3 +19,4 @@ describe 'Given an fsa', ->
     it 'should determine if the fsa accepts the given string', ->
       fsa.acceptsString('bcccb').should.be.true
       fsa.acceptsString('bccbb').should.be.true
+      fsa.acceptsString('cc').should.be.false

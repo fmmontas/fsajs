@@ -20,6 +20,7 @@ class FSA
 
     acceptsStringInternal =  (sequence, state) =>
       return yes if state.finalState and not sequence?.length
+      sequence = sequence.slice 0
       symbol = sequence.shift()
       validStates = state.transitions?.filter((transition) -> transition.symbol is symbol)?.map (transition) -> transition.stateName
       @states.filter((state) -> _.contains(validStates, state.name)).some (possibleState) -> acceptsStringInternal(sequence, possibleState)
